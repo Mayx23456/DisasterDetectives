@@ -1,0 +1,226 @@
+/* TITLE */
+.title-label {
+  -fx-font-family: "Jersey 10";
+  -fx-font-size: 70px;
+  -fx-text-fill: #ff6b00;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 4, 0, 2, 2);
+}
+
+/* PLAYER SETUP BOX */
+.setup-box {
+  -fx-background-color: rgba(20, 20, 20, 0.85);
+  -fx-border-color: rgba(120, 115, 100, 0.5);
+  -fx-border-width: 2;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0, 2);
+  -fx-padding: 20;
+  -fx-max-width: 560;
+  -fx-font-family: "Jersey 10";
+}
+
+.setup-heading {
+  -fx-font-size: 22px;
+  -fx-text-fill: white;
+}
+
+/* ◄ / ► buttons + number */
+.count-label {
+  -fx-font-size: 16px;
+  -fx-text-fill: #cccccc;
+}
+
+.count-display {
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
+  -fx-min-width: 30;
+  -fx-alignment: center;
+}
+
+.arrow-button {
+  -fx-background-color: #3a3a3a;
+  -fx-text-fill: #cccccc;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-background-radius: 4;
+  -fx-border-color: #555555;
+  -fx-border-radius: 4;
+  -fx-padding: 2 10 2 10;
+  -fx-cursor: hand;
+}
+
+.arrow-button:hover {
+  -fx-background-color: #555555;
+  -fx-text-fill: white;
+}
+
+/* PLAYER ROWS  */
+.player-label {
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-min-width: 28;
+}
+
+.player-name-field {
+  -fx-font-family: "Jersey 10";
+  -fx-background-color: #2a2a2a;
+  -fx-text-fill: #e0e0e0;
+  -fx-prompt-text-fill: #777777;
+  -fx-border-color: #555555;
+  -fx-border-radius: 4;
+  -fx-background-radius: 4;
+  -fx-pref-width: 180;
+}
+
+.player-name-field:focused {
+  -fx-border-color: #ff6b00;
+}
+
+.player-type-choice {
+  -fx-font-family: "Jersey 10";
+  -fx-font-size: 13px;
+  -fx-background-color: #2a2a2a;
+  -fx-border-color: #555555;
+  -fx-border-radius: 4;
+  -fx-background-radius: 4;
+  -fx-pref-width: 90;
+  -fx-mark-color: #cccccc;
+}
+
+/* ChoiceBox: selected value text (closed state) */
+.player-type-choice .label {
+  -fx-font-family: "Jersey 10";
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+/* ChoiceBox: dropdown arrow */
+.player-type-choice .arrow {
+  -fx-background-color: #cccccc;
+}
+
+/* ChoiceBox: arrow container */
+.player-type-choice .open-button {
+  -fx-background-color: transparent;
+}
+
+/* ChoiceBox: dropdown menu background */
+.player-type-choice .context-menu {
+  -fx-background-color: #2a2a2a;
+  -fx-border-color: #555555;
+}
+
+/* ChoiceBox: dropdown menu item text */
+.player-type-choice .context-menu .menu-item .label {
+  -fx-font-family: "Jersey 10";
+  -fx-text-fill: white;
+}
+
+/* ChoiceBox: dropdown menu item hover */
+.player-type-choice .context-menu .menu-item:hover .label {
+  -fx-text-fill: #ff6b00;
+}
+
+/* ACTION BUTTONS  */
+.action-button {
+  -fx-background-color: #858585;
+  -fx-text-fill: #1a1a1a;
+  -fx-font-size: 15px;
+  -fx-font-weight: bold;
+  -fx-pref-width: 180;
+  -fx-pref-height: 45;
+  -fx-background-radius: 8;
+  -fx-border-color: #5a5a5a;
+  -fx-border-radius: 8;
+  -fx-border-width: 2;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 3, 0, 1, 2);
+  -fx-cursor: hand;
+}
+
+.action-button:hover {
+  -fx-background-color: linear-gradient(to right, #cc4400, #ff8c00);
+  -fx-border-color: #ff8c00;
+  -fx-effect: dropshadow(gaussian, rgba(255, 140, 0, 0.6), 10, 0.3, 0, 0);
+}
+
+/* STATUS LABEL */
+.status-label {
+  -fx-text-fill: #ffd700;
+  -fx-font-size: 13px;
+}
+
+/* SETTINGS GEAR BUTTON */
+.settings-button {
+  -fx-background-color: rgba(30, 30, 30, 0.75);
+  -fx-text-fill: white;
+  -fx-font-size: 20px;
+  -fx-min-width: 38;
+  -fx-min-height: 38;
+  -fx-background-radius: 6;
+  -fx-border-color: rgba(255, 255, 255, 0.15);
+  -fx-border-radius: 6;
+  -fx-cursor: hand;
+}
+
+.settings-button:hover {
+  -fx-background-color: rgba(60, 60, 60, 0.9);
+  -fx-border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* SETTINGS POPUP */
+.settings-popup {
+  -fx-background-color: rgba(25, 25, 25, 0.97);
+  -fx-border-color: rgba(120, 115, 100, 0.4);
+  -fx-border-width: 1.5;
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;
+}
+
+.settings-title {
+  -fx-font-family: "Jersey 10";
+  -fx-font-size: 26px;
+  -fx-text-fill: white;
+}
+
+.settings-section-label {
+  -fx-font-family: "Jersey 10";
+  -fx-font-size: 16px;
+  -fx-text-fill: #cccccc;
+}
+
+.settings-toggle {
+  -fx-background-color: #2a2a2a;
+  -fx-text-fill: #cccccc;
+  -fx-font-family: "Jersey 10";
+  -fx-font-size: 14px;
+  -fx-background-radius: 4;
+  -fx-border-color: #555555;
+  -fx-border-radius: 4;
+  -fx-padding: 6 18 6 18;
+  -fx-cursor: hand;
+}
+
+.settings-toggle:hover {
+  -fx-background-color: #3a3a3a;
+  -fx-text-fill: white;
+}
+
+.settings-toggle:selected {
+  -fx-background-color: #cc4400;
+  -fx-text-fill: white;
+  -fx-border-color: #ff6b00;
+}
+
+.settings-close-button {
+  -fx-background-color: transparent;
+  -fx-text-fill: #aaaaaa;
+  -fx-font-size: 16px;
+  -fx-cursor: hand;
+  -fx-padding: 0 4 0 4;
+}
+
+.settings-close-button:hover {
+  -fx-text-fill: white;
+}
