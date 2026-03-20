@@ -1,0 +1,40 @@
+CREATE TABLE IF NOT EXISTS games (
+    id SERIAL PRIMARY KEY,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS game_state (
+    game_id INTEGER PRIMARY KEY REFERENCES games(id) ON DELETE CASCADE,
+    current_player_index INTEGER NOT NULL,
+    finished BOOLEAN NOT NULL,
+    winner_name TEXT
+);
+
+CREATE TABLE IF NOT EXISTS players (
+    id SERIAL PRIMARY KEY,
+    game_id INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE,
+    name TEXT NOT NULL,
+    position INTEGER NOT NULL,
+    turn_order INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS disasters (
+    id SERIAL PRIMARY KEY,
+    game_id INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE,
+    tile_index INTEGER NOT NULL,
+    question TEXT NOT NULL,
+    chosen_index INTEGER NOT NULL,
+    correct BOOLEAN NOT NULL,
+    occurred_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS turns (
+    id SERIAL PRIMARY KEY,
+    game_id INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE,
+    turn_number INTEGER NOT NULL,
+    player_name TEXT NOT NULL,
+    roll INTEGER NOT NULL,
+    start_pos INTEGER NOT NULL,
+    end_pos INTEGER NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
